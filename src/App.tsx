@@ -31,78 +31,13 @@ const App = () => {
 
               {/*  absolute top-1/2  left-1/2 w-full z-20 -translate-x-1/2 -translate-y-1/2  */}
               <div className="">
-                <div className="flex  items-center  justify-between">
+                <div className="flex  justify-between  gap-[88px] items-center ">
                   {stepperItems?.map((item, index) => {
                     if (item.isComplete) {
-                      if (stepperItems.length - 1 === index) {
-                        return (
-                          <div className=" flex flex-col items-center gap-5">
-                            <div className=""> {item.inCompleteIcon}</div>
-                            <p
-                              className={clx(
-                                "text-silver text-center text-nowrap",
-                                {
-                                  "text-msGreen": item.isComplete,
-                                }
-                              )}
-                            >
-                              {item.label}
-                            </p>
-                          </div>
-                        );
-                      } else {
-                        return (
-                          <div className=" flex flex-col items-center gap-5">
-                            <div className=" ">
-                              <div className=""> {item.inCompleteIcon}</div>
-                              <div className="relative ">
-                                <div className="bg-msGreen h-[2px] absolute top-1/2 left-0  -translate-y-1/2   z-10 w-full"></div>
-                              </div>
-                            </div>
-                            <p
-                              className={clx(
-                                "text-silver text-center text-nowrap",
-                                {
-                                  "text-msGreen": item.isComplete,
-                                }
-                              )}
-                            >
-                              {item.label}
-                            </p>
-                          </div>
-                        );
-                      }
-                    }
-
-                    if (!item.isComplete) {
-                      if (stepperItems.length - 1 === index) {
-                        return (
-                          <div className="flex flex-col items-center gap-5">
-                            <div className=" grid grid-cols-2 w-full items-center ">
-                              <div className="z-10"> {item.inCompleteIcon}</div>
-                            </div>
-                            <p
-                              className={clx(
-                                "text-silver text-center text-nowrap",
-                                {
-                                  "text-msGreen": item.isComplete,
-                                }
-                              )}
-                            >
-                              {item.label}
-                            </p>
-                          </div>
-                        );
-                      }
-
                       return (
-                        <div className="flex flex-col items-center gap-5">
-                          <div className=" grid grid-cols-2 w-full items-center ">
-                            <div className="z-10"> {item.inCompleteIcon}</div>
-                            <div className="relative ">
-                              <div className="bg-msGray h-[2px] w-full "></div>
-                            </div>
-                          </div>
+                        <div className=" flex flex-col items-center gap-5">
+                          {item.completeIcon}
+
                           <p
                             className={clx(
                               "text-silver text-center text-nowrap",
@@ -116,6 +51,22 @@ const App = () => {
                         </div>
                       );
                     }
+                    return (
+                      <div className="flex flex-col items-center gap-5">
+                        {item.inCompleteIcon}
+
+                        <p
+                          className={clx(
+                            "text-silver text-center text-nowrap",
+                            {
+                              "text-msGreen": item.isComplete,
+                            }
+                          )}
+                        >
+                          {item.label}
+                        </p>
+                      </div>
+                    );
                   })}
                 </div>
               </div>
