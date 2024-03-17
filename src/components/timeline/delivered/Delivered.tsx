@@ -51,23 +51,26 @@ const Delivered: React.FC<DeliveredProps> = ({
           <time className="block text-silver ">19 January 2024 at 10:35am</time>
 
           <p className="pb-3 pt-2">Your product has been delivered.</p>
-          <div className="flex items-center gap-2">
-            <img
-              src="https://picsum.photos/50/50"
-              className=" rounded-md"
-              alt=""
-            />
-            <img
-              src="https://picsum.photos/50/50"
-              className=" rounded-md"
-              alt=""
-            />
-            <img
-              src="https://picsum.photos/50/50"
-              className=" rounded-md"
-              alt=""
-            />
-          </div>
+
+          {images?.length > 0 && (
+            <div className="flex items-center gap-2">
+              <img
+                src="https://picsum.photos/50/50"
+                className=" rounded-md"
+                alt=""
+              />
+              <img
+                src="https://picsum.photos/50/50"
+                className=" rounded-md"
+                alt=""
+              />
+              <img
+                src="https://picsum.photos/50/50"
+                className=" rounded-md"
+                alt=""
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>
