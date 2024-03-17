@@ -8,6 +8,7 @@ export default {
         silver: {
           DEFAULT: "#6B717A",
           100: "#F7F8FA",
+          200: "#D9D9D9",
         },
         msGreen: {
           DEFAULT: "#00893C",
