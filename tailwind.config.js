@@ -16,6 +16,9 @@ export default {
         msGray: {
           DEFAULT: "#EDF2FA",
         },
+        msBlue: {
+          100: "#EDF2FA",
+        },
 
         ...blackA,
         ...green,
