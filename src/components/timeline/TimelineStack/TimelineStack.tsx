@@ -1,3 +1,4 @@
+import CheckedIcon from "@/components/icons/CheckedIcon";
 import CircleIcon from "@/components/icons/circle-icon/CircleIcon";
 import PendingIcon from "@/components/icons/panding-icon/PandingIcon";
 import clx from "@/utils/clx";
@@ -50,7 +51,7 @@ const TimelineStack: React.FC<DeliveredProps> = ({
           return (
             <div className="ms-6 mt-4 ">
               <span className="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-white text-center ">
-                <CircleIcon />
+                <CheckedIcon />
               </span>
               <div className="">
                 <time className="block text-nowrap text-silver">
@@ -66,7 +67,7 @@ const TimelineStack: React.FC<DeliveredProps> = ({
       ) : (
         <div className="ms-6 mt-4 ">
           <span className="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-white text-center ">
-            <CircleIcon />
+            <CheckedIcon />
           </span>
           <div className="">
             <time className="block text-nowrap text-silver">

@@ -10,6 +10,7 @@ import DestinationIcon from "../icons/destination-icon/DestinationIcon";
 import PendingIcon from "../icons/panding-icon/PandingIcon";
 import WarehouseIcon from "../icons/warehouse-icon/WarehouseIcon";
 import PurchasedIcon from "../icons/purchased-icon/PurchasedIcon";
+import Pending from "./pending/Pending";
 
 const Timeline = () => {
   return (
@@ -51,6 +52,9 @@ const Timeline = () => {
           />
         </div>
       </div>
+
+
+      
       <div className="relative ml-6 space-y-8 border-s-2 pt-6  ">
         <TimelineStack
           iconTitleClass="-start-3"
@@ -60,8 +64,8 @@ const Timeline = () => {
         />
       </div>
 
-      <div className="relative ml-6 space-y-8 border-s-2   ">
-        <TimelineStack
+      <div className="relative mx-6 space-y-8 border-s-2   ">
+        <Pending
           iconTitleClass="-start-2"
           timeList={[1, 2, 3]}
           iconTitle={<PendingIcon />}
