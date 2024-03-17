@@ -7,58 +7,44 @@ import WarehouseIcon from "@/components/icons/warehouse-icon/WarehouseIcon";
 
 const stepperItems = [
   {
-    completeIcon: <PendingIcon iconWrapperStyle="ring  ring-msGreen" />,
-    inCompleteIcon: (
-      <PendingIcon fillColor="#6B717A80" iconWrapperStyle="bg-msGray" />
-    ),
+    completeIcon: <PendingIcon />,
+    inCompleteIcon: <PendingIcon fillColor="#6B717A80" />,
     label: "Pending",
     isComplete: true,
   },
   {
-    completeIcon: <PurchasedIcon iconWrapperStyle="ring  ring-msGreen" />,
-    inCompleteIcon: (
-      <PurchasedIcon fillColor="#6B717A80" iconWrapperStyle="bg-msGray" />
-    ),
+    completeIcon: <PurchasedIcon />,
+    inCompleteIcon: <PurchasedIcon fillColor="#6B717A80" />,
     label: "Purchased",
     isComplete: true,
   },
   {
-    completeIcon: <WarehouseIcon iconWrapperStyle="ring  ring-msGreen" />,
-    inCompleteIcon: (
-      <WarehouseIcon fillColor="#6B717A80" iconWrapperStyle="bg-msGray" />
-    ),
+    completeIcon: <WarehouseIcon />,
+    inCompleteIcon: <WarehouseIcon fillColor="#6B717A80" />,
     label: "At China Warehouse",
     isComplete: true,
   },
   {
-    completeIcon: <DestinationIcon iconWrapperStyle="ring  ring-msGreen" />,
-    inCompleteIcon: (
-      <DestinationIcon fillColor="#6B717A80" iconWrapperStyle="bg-msGray" />
-    ),
+    completeIcon: <DestinationIcon />,
+    inCompleteIcon: <DestinationIcon fillColor="#6B717A80" />,
     label: "Way to destination",
     isComplete: false,
   },
   {
-    completeIcon: <ReceivedIcon iconWrapperStyle="ring  ring-msGreen" />,
-    inCompleteIcon: (
-      <ReceivedIcon fillColor="#6B717A80" iconWrapperStyle="bg-msGray" />
-    ),
+    completeIcon: <ReceivedIcon />,
+    inCompleteIcon: <ReceivedIcon fillColor="#6B717A80" />,
     label: "Received at MoveOn",
     isComplete: false,
   },
   {
-    completeIcon: <CourierIcon iconWrapperStyle="ring  ring-msGreen" />,
-    inCompleteIcon: (
-      <CourierIcon fillColor="#6B717A80" iconWrapperStyle="bg-msGray" />
-    ),
+    completeIcon: <CourierIcon />,
+    inCompleteIcon: <CourierIcon fillColor="#6B717A80" />,
     label: "At Courier",
     isComplete: false,
   },
   {
-    completeIcon: <PendingIcon iconWrapperStyle="ring  ring-msGreen" />,
-    inCompleteIcon: (
-      <PendingIcon fillColor="#6B717A80" iconWrapperStyle="bg-msGray" />
-    ),
+    completeIcon: <PendingIcon />,
+    inCompleteIcon: <PendingIcon fillColor="#6B717A80" />,
     label: "Delivered",
     isComplete: false,
   },

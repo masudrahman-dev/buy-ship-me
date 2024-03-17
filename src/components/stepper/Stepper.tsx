@@ -2,11 +2,12 @@ import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import React from "react";
 import stepperItems from "./stepper-items/stepperItems";
 import clx from "@/utils/clx";
+import IconWrapper from "../icons/IconWrapper";
 
 const Stepper = () => {
   const progressCount = 6;
   return (
-    <div className="h-[204px]  pt-[26px] px-6 pb-6 bg-white rounded-xl">
+    <div className="h-[204px]  rounded-xl bg-white px-6 pb-6 pt-[26px]">
       <div className="flex items-center gap-2">
         <ArrowLeftIcon />
         <p>
@@ -16,31 +17,33 @@ const Stepper = () => {
       </div>
       <div className="mt-6">
         <div className="  relative">
-          <div className="absolute w-full top-9 z-20">
+          <div className="absolute top-9 z-20 w-full">
             <div className="relative overflow-hidden">
-              <div className="bg-msGray h-[2px] w-full "></div>
+              <div className="h-[2px] w-full bg-msGray "></div>
               <div
-                className="bg-msGreen h-[2px] absolute top-1/2 left-0  -translate-y-1/2  z-10"
+                className="absolute left-0 top-1/2 z-10 h-[2px]  -translate-y-1/2  bg-msGreen"
                 style={{ width: `${16.6666666 * progressCount}%` }}
               ></div>
             </div>
           </div>
 
           {/*  absolute top-1/2  left-1/2 w-full z-20 -translate-x-1/2 -translate-y-1/2  */}
-          <div className="z-50 absolute  w-full   ">
-            <div className="flex  justify-between  items-center ">
+          <div className="absolute z-50  w-full   ">
+            <div className="flex  items-center  justify-between ">
               {stepperItems?.map((item, index) => {
                 if (item.isComplete) {
                   return (
                     <div className=" flex  flex-col items-center gap-5">
-                      {item.completeIcon}
+                      <IconWrapper iconWrapperStyle="ring  ring-msGreen">
+                        {item.completeIcon}
+                      </IconWrapper>
 
                       <p
                         className={clx(
-                          "text-silver text-center text-label text-nowrap",
+                          "text-nowrap text-center text-label text-silver",
                           {
                             "text-msGreen": item.isComplete,
-                          }
+                          },
                         )}
                       >
                         {item.label}
@@ -50,10 +53,12 @@ const Stepper = () => {
                 }
                 return (
                   <div className="flex flex-col items-center gap-5">
-                    {item.inCompleteIcon}
+                    <IconWrapper iconWrapperStyle="bg-msGray">
+                      {item.completeIcon}
+                    </IconWrapper>
 
                     <p
-                      className={clx("text-silver text-center text-nowrap", {
+                      className={clx("text-nowrap text-center text-silver", {
                         "text-msGreen": item.isComplete,
                       })}
                     >
