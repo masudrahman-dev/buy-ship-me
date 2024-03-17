@@ -17,7 +17,30 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        label: [
+          "14px",
+          {
+            fontWeight: "400",
+          },
+        ],
+        base: [
+          "1rem",
+          {
+            fontWeight: "400",
+          },
+        ],
+      },
+
       colors: {
+        silver: {
+          DEFAULT: "#6B717A",
+        },
+        msGreen: {
+          DEFAULT: "#00893C",
+          light: "#DFFFED",
+        },
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

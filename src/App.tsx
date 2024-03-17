@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div className="max-w-[1441px] mx-auto  ">
       <Topbar />
-      {/* <Navbar /> */}
+      <Navbar />
     </div>
   );
 };

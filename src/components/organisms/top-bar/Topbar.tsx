@@ -7,7 +7,7 @@ import React from "react";
 
 const Topbar = () => {
   return (
-    <div className="flex items-center justify-between px-10 py-[9px]">
+    <div className="flex items-center justify-between px-10 py-[9px] text-silver">
       <div className="flex gap-4 items-center">
         <div className="flex gap-2 items-center">
           <PhoneIcon />
