@@ -1,7 +1,11 @@
 import CheckedIcon from "@/components/icons/CheckedIcon";
-import React from "react";
-
-const StackCard = ({ images, time,desc }) => {
+import React, { ReactNode } from "react";
+interface StackCardProps {
+  images?: string[] | number[];
+  time?: string;
+  desc?: ReactNode;
+}
+const StackCard: React.FC<StackCardProps> = ({ images = [], time, desc }) => {
   return (
     <div className="ms-6 mt-4 ">
       <span className="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-white text-center ">
