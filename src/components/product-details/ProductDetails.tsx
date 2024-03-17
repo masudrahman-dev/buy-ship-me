@@ -7,7 +7,7 @@ const ProductDetails = () => {
     <div className="p-6 bg-white rounded-xl">
       <div>
         <div>
-          <p className="text-base font-bold">Product details</p>
+          <p className="text-[18px] font-bold">Product details</p>
           <div className="flex  items-start gap-6 mt-6">
             <img
               className="rounded-md"
@@ -85,9 +85,7 @@ const ProductDetails = () => {
           </li>
           <li className="list-disc list-outside ml-4 ">
             <p className="flex gap-1 items-center justify-between ">
-              <span className="text-base font-semibold">
-                Shipping & Custom
-              </span>
+              <span className="text-base font-semibold">Shipping & Custom</span>
             </p>
           </li>
           <li>
@@ -111,6 +109,10 @@ const ProductDetails = () => {
           <span>৳6000</span>
         </p>
       </div>
+
+
+
+      
     </div>
   );
 };
