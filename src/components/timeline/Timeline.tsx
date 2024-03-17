@@ -8,6 +8,8 @@ import CourierIcon from "../icons/courier-icon/CourierIcon";
 import ReceivedIcon from "../icons/received-icon/ReceivedIcon";
 import DestinationIcon from "../icons/destination-icon/DestinationIcon";
 import PendingIcon from "../icons/panding-icon/PandingIcon";
+import WarehouseIcon from "../icons/warehouse-icon/WarehouseIcon";
+import PurchasedIcon from "../icons/purchased-icon/PurchasedIcon";
 
 const Timeline = () => {
   return (
@@ -40,20 +42,20 @@ const Timeline = () => {
       </div>
 
       <div className="bg-[#F3FFF8] pl-6">
-        <div className="relative  py-6 space-y-8 border-s-2   ">
+        <div className="relative  space-y-8 border-s-2 pt-6   ">
           <TimelineStack
             iconTitleClass="-start-3"
             timeList={[1, 2, 3, 4]}
-            iconTitle={<DestinationIcon />}
-            label="Way To Destination"
+            iconTitle={<WarehouseIcon />}
+            label="At China Warehouse"
           />
         </div>
       </div>
-      <div className="relative ml-6 mt-6 space-y-8 border-s-2  ">
+      <div className="relative ml-6 space-y-8 border-s-2 pt-6  ">
         <TimelineStack
           iconTitleClass="-start-3"
           timeList={[1, 2, 3]}
-          iconTitle={<DestinationIcon />}
+          iconTitle={<PurchasedIcon />}
           label="Purchased"
         />
       </div>
