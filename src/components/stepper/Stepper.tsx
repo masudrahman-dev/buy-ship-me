@@ -27,43 +27,46 @@ const Stepper = () => {
             </div>
           </div>
 
-          {/*  absolute top-1/2  left-1/2 w-full z-20 -translate-x-1/2 -translate-y-1/2  */}
-          <div className="absolute z-50  w-full   ">
-            <div className="flex  items-center  justify-between ">
+          <div className="absolute z-50 w-full">
+            <div className="flex justify-between">
               {stepperItems?.map((item, index) => {
                 if (item.isComplete) {
                   return (
-                    <div className=" flex  flex-col items-center gap-5">
-                      <IconWrapper iconWrapperStyle="ring  ring-msGreen">
-                        {item.completeIcon}
-                      </IconWrapper>
+                    <div key={index}>
+                      <div className="flex flex-col items-center gap-5">
+                        <IconWrapper iconWrapperStyle="ring ring-msGreen">
+                          {item.completeIcon}
+                        </IconWrapper>
 
-                      <p
-                        className={clx(
-                          "text-nowrap text-center text-label text-silver",
-                          {
-                            "text-msGreen": item.isComplete,
-                          },
-                        )}
-                      >
-                        {item.label}
-                      </p>
+                        <p
+                          className={clx(
+                            "text-nowrap text-center text-label text-silver",
+                            {
+                              "text-msGreen": item.isComplete,
+                            },
+                          )}
+                        >
+                          {item.label}
+                        </p>
+                      </div>
                     </div>
                   );
                 }
                 return (
-                  <div className="flex flex-col items-center gap-5">
-                    <IconWrapper iconWrapperStyle="bg-msGray">
-                      {item.inCompleteIcon}
-                    </IconWrapper>
+                  <div key={index}>
+                    <div className="flex flex-col items-center gap-5">
+                      <IconWrapper iconWrapperStyle="bg-msGray">
+                        {item.inCompleteIcon}
+                      </IconWrapper>
 
-                    <p
-                      className={clx("text-nowrap text-center text-silver", {
-                        "text-msGreen": item.isComplete,
-                      })}
-                    >
-                      {item.label}
-                    </p>
+                      <p
+                        className={clx("text-nowrap text-center text-silver", {
+                          "text-msGreen": item.isComplete,
+                        })}
+                      >
+                        {item.label}
+                      </p>
+                    </div>
                   </div>
                 );
               })}

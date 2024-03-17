@@ -15,7 +15,7 @@ const Timeline = () => {
       <div className="p-6">
         <Title>Product Timeline</Title>
       </div>
-      <div className=" pl-6">
+      <div className=" px-6">
         <div className="relative space-y-[38px]  border-s-2 pb-[38px] ">
           <TimelineStack images={[1, 2, 3]}>
             {[...Array(1)].map(() => {
@@ -111,7 +111,7 @@ const Timeline = () => {
         </div>
       </div>
 
-      <div className="bg-[#F3FFF8] pl-6 ">
+      <div className="bg-[#F3FFF8] px-6 ">
         <div className="relative  space-y-8 border-s-2 pt-6   ">
           <TimelineStack
             iconTitleClass="-start-3"
@@ -153,7 +153,7 @@ const Timeline = () => {
         </div>
       </div>
 
-      <div className="relative ml-6  border-s-2 pt-6  ">
+      <div className="relative mx-6  border-s-2 pt-6  ">
         <TimelineStack
           iconTitleClass="-start-3"
           iconTitle={<PurchasedIcon />}
