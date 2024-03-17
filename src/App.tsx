@@ -1,13 +1,6 @@
-import { HomeIcon } from "@radix-ui/react-icons";
-import Title from "./components/atoms/title/Title";
-import ProductDetails from "./components/product-details/ProductDetails";
+
 import Stepper from "./components/stepper/Stepper";
-import IconWrapper from "./components/icons/IconWrapper";
-import UserIcon from "./components/icons/UserIcon";
-import EmailIcon from "./components/icons/EmailIcon";
-import PhoneIcon from "./components/icons/PhoneIcon";
-import NavigateIcon from "./components/icons/NavigateIcon";
-import DeliveryAddress from "./components/product-details/delivery-address/DeliveryAddress";
+
 import Details from "./components/product-details/Details";
 import Timeline from "./components/timeline/Timeline";
 
