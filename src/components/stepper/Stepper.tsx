@@ -5,7 +5,7 @@ import clx from "@/utils/clx";
 import IconWrapper from "../icons/IconWrapper";
 
 const Stepper = () => {
-  const progressCount = 6;
+  const progressCount = 3;
   return (
     <div className="h-[204px]  rounded-xl bg-white px-6 pb-6 pt-[26px]">
       <div className="flex items-center gap-2">
@@ -54,7 +54,7 @@ const Stepper = () => {
                 return (
                   <div className="flex flex-col items-center gap-5">
                     <IconWrapper iconWrapperStyle="bg-msGray">
-                      {item.completeIcon}
+                      {item.inCompleteIcon}
                     </IconWrapper>
 
                     <p
