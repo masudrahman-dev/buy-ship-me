@@ -4,8 +4,8 @@ import stepperItems from "./stepper-items/stepperItems";
 import clx from "@/utils/clx";
 import IconWrapper from "../icons/IconWrapper";
 
+let progressCount = 0;
 const Stepper = () => {
-  const progressCount = 3;
   return (
     <div className="h-[204px]  rounded-xl bg-white px-6 pb-6 pt-[26px]">
       <div className="flex items-center gap-2">
@@ -31,41 +31,35 @@ const Stepper = () => {
             <div className="flex justify-between">
               {stepperItems?.map((item, index) => {
                 if (item.isComplete) {
+                  progressCount += 1;
                   return (
-                    <div key={index}>
+                    <div
+                      key={index}
+                      className={clx(
+                        `relative after:absolute after:-bottom-16 after:left-1/2  after:h-8  after:w-40 after:-translate-x-1/2 after:-translate-y-1/2 after:text-center   after:text-msGreen`,
+                        item.label,
+                      )}
+                    >
                       <div className="flex flex-col items-center gap-5">
                         <IconWrapper iconWrapperStyle="ring ring-msGreen">
                           {item.completeIcon}
                         </IconWrapper>
-
-                        <p
-                          className={clx(
-                            "text-nowrap text-center text-label text-silver",
-                            {
-                              "text-msGreen": item.isComplete,
-                            },
-                          )}
-                        >
-                          {item.label}
-                        </p>
                       </div>
                     </div>
                   );
                 }
                 return (
-                  <div key={index}>
+                  <div
+                    key={index}
+                    className={clx(
+                      `relative after:absolute after:-bottom-16 after:left-1/2  after:h-8  after:w-40 after:-translate-x-1/2 after:-translate-y-1/2 after:text-center   after:text-silver`,
+                      item.label,
+                    )}
+                  >
                     <div className="flex flex-col items-center gap-5">
                       <IconWrapper iconWrapperStyle="bg-msGray">
                         {item.inCompleteIcon}
                       </IconWrapper>
-
-                      <p
-                        className={clx("text-nowrap text-center text-silver", {
-                          "text-msGreen": item.isComplete,
-                        })}
-                      >
-                        {item.label}
-                      </p>
                     </div>
                   </div>
                 );
