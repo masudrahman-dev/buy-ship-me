@@ -28,7 +28,7 @@ const Stepper = () => {
           </div>
 
           <div className="absolute z-50 w-full">
-            <div className="flex justify-between">
+            <div className="flex justify-between items-center">
               {stepperItems?.map((item, index) => {
                 if (item.isComplete) {
                   progressCount += 1;
